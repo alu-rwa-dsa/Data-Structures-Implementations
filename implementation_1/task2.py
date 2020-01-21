@@ -1,7 +1,6 @@
-# import the need library to calc the time and space complexity and plot it
+# Calc and plot time complexity of the sort, lower, max python functions
 from matplotlib import pyplot
 from time import perf_counter
-from memory_profiler import memory_usage
 import random
 
 
@@ -45,25 +44,6 @@ def plotTime(f, minArg, maxArg):
     return len_input, t
 
 
-# def plotSpace():
-#     """
-#     Run memory_space test and plot space complexity
-#     """
-#     input_len = []
-#     space = []
-#     for i in range(1,100):
-#         l_input = random.sample(range(100), i)
-#         mem = profile.Profile(sort_arr(l_input))
-#         print(mem)
-#         input_len.append(i)
-#         space.append(mem)
-#
-#     pyplot.plot(input_len, space, 'o')
-#     pyplot.xlabel("List length")
-#     pyplot.ylabel("Space in MB")
-#     pyplot.show()
-
-
 def size_million(f):
     """
     estimating the time if the input length is 1,000,000
@@ -79,7 +59,7 @@ def size_million(f):
 
 
 def main():
-    # task 2; plot the time and space it takes a function to run an input of len 1: 100
+    # task 2; plot the time it takes for a given function to run with an input length of len 1: 100
     print('Analyzing Algorithms...')
     # calling the plotTime function and give it a function name, min, max values
     len_input, t = plotTime(sort_arr, 1, 100)

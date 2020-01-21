@@ -1,4 +1,4 @@
-# Time and space calculation for running binary search algorithm
+# Time and space calculation of binary search algorithm
 import time
 import memory_profiler
 
