@@ -3,7 +3,6 @@ from matplotlib import pyplot
 from memory_profiler import memory_usage
 import random
 
-
 # sort an array in ascending Order
 def sort_arr():
     return l_input.sort()
