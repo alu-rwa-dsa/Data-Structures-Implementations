@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34cbe399-f574-4e9b-8873-d8859e944877" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task3.py" beforeDir="false" afterPath="$PROJECT_DIR$/task3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +28,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../sorting" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.task3">
-    <configuration name="binary_search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Iterables">
+    <configuration name="Iterables" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled2" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -41,32 +40,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Notes" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/binary_search.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="memory_usage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="untitled2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/memory_usage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Notes/Iterables.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,20 +116,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.binary_search" />
-      <item itemvalue="Python.memory_usage" />
       <item itemvalue="Python.sort_arr" />
       <item itemvalue="Python.task2" />
       <item itemvalue="Python.task3" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.Iterables" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Iterables" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.task3" />
         <item itemvalue="Python.task2" />
         <item itemvalue="Python.sort_arr" />
-        <item itemvalue="Python.binary_search" />
-        <item itemvalue="Python.memory_usage" />
       </list>
     </recent_temporary>
   </component>
@@ -189,37 +188,80 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="206" y="128" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1500.960@0.0.1500.960" timestamp="1579774082492" />
-    <state x="481" y="178" key="FileChooserDialogImpl" timestamp="1579728351504">
+    <state x="481" y="178" key="FileChooserDialogImpl" timestamp="1579953524156">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="481" y="178" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1579728351504" />
-    <state width="1474" height="103" key="GridCell.Tab.0.bottom" timestamp="1579781248658">
+    <state x="481" y="178" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1579953524156" />
+    <state width="1474" height="300" key="GridCell.Tab.0.bottom" timestamp="1579953525636">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1474" height="103" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1579781248658" />
-    <state width="1474" height="103" key="GridCell.Tab.0.center" timestamp="1579781248658">
+    <state width="1474" height="300" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
+    <state width="1474" height="300" key="GridCell.Tab.0.center" timestamp="1579953525636">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1474" height="103" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1579781248658" />
-    <state width="1474" height="103" key="GridCell.Tab.0.left" timestamp="1579781248658">
+    <state width="1474" height="300" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
+    <state width="1474" height="300" key="GridCell.Tab.0.left" timestamp="1579953525636">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1474" height="103" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1579781248658" />
-    <state width="1474" height="103" key="GridCell.Tab.0.right" timestamp="1579781248658">
+    <state width="1474" height="300" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
+    <state width="1474" height="300" key="GridCell.Tab.0.right" timestamp="1579953525636">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state width="1474" height="103" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1579781248658" />
+    <state width="1474" height="300" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
+    <state width="1474" height="300" key="GridCell.Tab.1.bottom" timestamp="1579953525636">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1474" height="300" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
+    <state width="1474" height="300" key="GridCell.Tab.1.center" timestamp="1579953525636">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1474" height="300" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
+    <state width="1474" height="300" key="GridCell.Tab.1.left" timestamp="1579953525636">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1474" height="300" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
+    <state width="1474" height="300" key="GridCell.Tab.1.right" timestamp="1579953525636">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1474" height="300" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1579953525636" />
     <state x="136" y="37" key="SettingsEditor" timestamp="1579773460398">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="136" y="37" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1579773460398" />
-    <state x="370" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1579774024624">
+    <state x="370" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1579945329138">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
-    <state x="370" y="263" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1579774024624" />
+    <state x="370" y="263" key="com.intellij.ide.util.TipDialog/0.0.1500.960@0.0.1500.960" timestamp="1579945329138" />
+    <state x="220" y="155" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1579953475445">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="220" y="155" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1500.960@0.0.1500.960" timestamp="1579953475445" />
     <state x="329" y="0" width="840" height="1034" key="search.everywhere.popup" timestamp="1579514639440">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="329" y="0" width="840" height="1034" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1579514639440" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../Notes/Iterables.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="tot" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
