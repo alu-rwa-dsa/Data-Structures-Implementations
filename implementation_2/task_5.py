@@ -3,24 +3,13 @@ Input an integer n and outputs a list with 1 once, 2 twice, 3 three times….n n
 """
 
 
-def counter(num):
+def listCounter(num):
     return [i for i in range(1, num+1) for _ in range(i)]
 
 
-def counter_2(num):
+def listCounter2(num):
     l = []
     for i in range(1, num+1):
         l.extend([i] * i)
     return l
 
-
-print(counter_2(3))
-
-
-
-d = set([1,2, 3])
-l = {}
-
-l[("ahmed", "mohamed")] = 10
-print(d)
-print(l)
