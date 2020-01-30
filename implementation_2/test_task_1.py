@@ -1,11 +1,13 @@
 import unittest
 from task_1 import deleteWhitespaces
 
+
 class Test(unittest.TestCase):
     """
     Test class tests different possible string inputs to deleteWhitespaces against there expected output
     if the function output matches the expected given output; return Ok
     """
+
     def testCase1(self):
         self.assertEqual(deleteWhitespaces("hello       my        friend"), "hello my friend")
 
@@ -17,4 +19,4 @@ class Test(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    Test()
+    unittest.main()

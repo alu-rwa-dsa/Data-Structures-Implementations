@@ -9,6 +9,7 @@ def sort_arr(arr):
     return arr.sort()
 
 
+
 # get the max value from an array of integers
 def max_arr(arr):
     return max(arr)

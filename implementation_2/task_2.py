@@ -1,10 +1,15 @@
-"""
-Input 2 lists - listA with n elements and listB which has all elements of listA except one (but the
-rest are in the same order). Outputs the missing element. E.g. f([8,1,2,3],[8,1,3]) outputs 2
-"""
+# time complexity is o(n) where n is the length of the input string because we are looping through every char
+# Space complexity is o(n) where n is the length of the string, because n the worst case
+# all the chars are unique and every time we will add the new char to the dictionary
 
 
 def charOccurrences(string):
+    """
+    charOccurrences defies an empty dictionary and adds every unique char in the input string
+    as a key associated with its number of occurrence as a value
+    :param string: user input string contains letters
+    :return: a dictionary with the input string unique chars as keys and their number of occurrence as values
+    """
     # create an empty dictionary
     d = {}
     # loop through the string
@@ -16,6 +21,3 @@ def charOccurrences(string):
         else:
             d[char] = 1
     return d
-
-
-print(charOccurrences("mmm ahn 12 a"))
