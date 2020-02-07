@@ -1,8 +1,8 @@
 --- Time and Space complexity analysis of the Array class ---
 
 Method 1: Set(value, ind)
-Time complexity O(n): setting an element in specific index takes linear time in the worst case if we have n elements
-and we set a new value to index 0, then we will need to shift all the n elements.
+Time complexity O(1): setting an element in specific index takes constant time because the index is stored
+and the only needed operation is setting a value at that index.
 Space complexity O(1): setting an element in specific index doesn't require any extra space so, it takes
 constant space.
 

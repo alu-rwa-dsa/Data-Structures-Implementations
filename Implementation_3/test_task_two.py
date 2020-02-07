@@ -20,7 +20,7 @@ class TestTaskThree(unittest.TestCase):
 
     def test_delete_2(self):
         arr1.delete()  # delete the last element in the array
-        with self.assertRaises(IndentationError):  # test for an indexationError if we delete when the arr is empty
+        with self.assertRaises(IndexError):  # test for an index error if we delete when the arr is empty
             arr1.delete()
 
 

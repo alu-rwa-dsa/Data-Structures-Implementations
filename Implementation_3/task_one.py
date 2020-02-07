@@ -7,8 +7,16 @@ Create a simple array class  where each element must be an integer type and:
 
 
 class Array(object):
-    def __init__(self):
-        self.array = []  # define array field with the value of the given array (arr)
+    def __init__(self, size):
+        self.size = size  # define a fixed size of the array
+        self.array = [None] * size  # define array field with the value of the given array (arr)
+        self._n = 0  # count the number of elements given to the array
+
+    def __str__(self):
+        """
+        Show the array if the instance variable was printed
+        """
+        return self.array
 
     def set(self, val, ind):
         """
@@ -18,8 +26,12 @@ class Array(object):
         :return: TypeError if the given value is not an int
         """
         if type(val) != int:  # raise type error if value not int type
-            raise TypeError ("Invalid type, not int")
-        self.array.set(ind, val)
+            raise TypeError
+        elif ind > self.size:  # if the given value index greater than the fixed size of the array raise an error
+            raise IndexError
+        else:
+            self._n += 1
+            self.array[ind] = val
 
     def get(self, ind):
         """
@@ -34,9 +46,11 @@ class Array(object):
         """
         :return: the number of elements in the array
         """
-        return len(self.array)
+        return self._n
 
 
-if __name__ == "__main__":
-    Array()
+if __name__ == '__main__':
+    Array(5)
+
+
 

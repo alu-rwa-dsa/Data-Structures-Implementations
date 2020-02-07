@@ -1,5 +1,5 @@
 from task_two import DynamicArray
-from task_three import *
+from task_three import contains, insert, rev
 import unittest  # import the unittest module to test the class methods
 
 
@@ -19,12 +19,12 @@ class TestTaskThree(unittest.TestCase):
     def test_reverser2(self):
         self.assertEqual(contains(arr1, 7), False)  # check if 7 is in the array == False
 
+    def test_rev(self):
+        self.assertEqual(rev(arr1), [10, 5, 3])  # reverse the array elements
+
     def test_insert(self):
         # insert the value 120 in position 0 of the array
         self.assertEqual(insert(arr1, 120, 0), [120, 3, 5, 10])
-
-    def test_rev(self):
-        self.assertEqual(rev(arr1), [10, 5, 3, 120])  # reverse the array elements
 
 
 if __name__ == '__main__':

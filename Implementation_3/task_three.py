@@ -44,7 +44,14 @@ def insert(array, val, ind):
     :param ind: the index in where the value should be added
     :return: the array after adding the value at the given index
     """
-    # using the set method from the dynamic array to insert the value
-    array.set(val, ind)
-    # calling the show method from the dynamic class to print the array
-    return array.show()
+    added = False
+    new_arr = []
+    for i in range(array.len() +1):
+        if i == ind:
+            new_arr.append(val)
+            added = True
+        elif added:
+            new_arr.append(array.get(i -1))
+        else:
+            new_arr.append(array.get(i))
+    return new_arr
