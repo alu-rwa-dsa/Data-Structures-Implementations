@@ -2,7 +2,7 @@
 from matplotlib import pyplot
 from time import perf_counter
 import random
-
+import re
 
 # sort an array in ascending Order
 def sort_arr(arr):
@@ -17,8 +17,7 @@ def max_arr(arr):
 
 # transform letters of a string to lower case
 def lower_case(word):
-    return word.lower()
-
+    return " ".join(re.findall(r"[a-zA-Z0-9]+", word))
 
 def plotTime(f, minArg, maxArg):
     """
@@ -29,7 +28,7 @@ def plotTime(f, minArg, maxArg):
     for i in range(minArg, maxArg):
         if f == lower_case:
             # string of capital As of length i
-            l_input = "A" * i
+            l_input = "Aaaaa" + " "*i + "AAasama" + " "*i
         else:
             # randomize an array of length i with values from 0 to 100
             l_input = random.sample(range(100), i)

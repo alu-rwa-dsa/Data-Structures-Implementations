@@ -5,40 +5,34 @@ import random
 
 
 # sort an array in ascending Order
-def sort_arr(l_input):
+def sort_arr(ind):
+    l_input = random.sample(range(100), ind)
     return l_input.sort()
 
 
 # get the max value from an array of integers
-def max_arr(l_input):
+def max_arr(ind):
+    l_input = random.sample(range(100), ind)
     max_num = max(l_input)
     return max_num
 
 
 # transform letters of a string to lower case
-def lower_case(s):
+def lower_case(ind):
+    s = "A"*ind
     return s.lower()
 
 
-def sort_fix(i):
-    l_input = random.sample(range(100), i)
-    start= memory_usage()
-    print(start)
-    sort_arr(l_input)
-    end = memory_usage()
-    return end[-1] - start[-1]
-
-
-def plotSpace(minArg, maxArg):
+def plotSpace(f, minArg, maxArg):
     """
     Run memory_space test and plot space complexity
     """
     input_ind = []
     space = []
     for i in range(minArg, maxArg):
-        mem = sort_fix(i)
+        mem = memory_usage((f, (i, )))
         input_ind.append(i)
-        space.append(mem)
+        space.append(mem[-1])
     return input_ind, space
 
 
@@ -46,7 +40,7 @@ def main():
     # task 3; plot space it takes for a given function to execute given input of len 1: 100
     print('Analyzing Algorithms...')
     # calling the plotSpace function and give it a function name, min, max values
-    len_input, t = plotSpace(1, 100)
+    len_input, t = plotSpace(sort_arr, 1, 100)
     # plot the output
     pyplot.plot(len_input, t, 'o')
     # title of the plot
