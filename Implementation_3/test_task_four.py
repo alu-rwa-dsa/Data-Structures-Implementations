@@ -32,7 +32,7 @@ class TestTaskThree(unittest.TestCase):
     def test_modify(self):
         global d1
         d1.modify("Ahmed", 120)
-        self.assertEqual(d1.lookUp("Ahmed"), 120)  # check the value of the key Ahmed is updated to 120
+        self.assertEqual(d1.lookUp("Ahmed"), 120)  # check if the value associated with the key Ahmed is updated to 120
 
 
 if __name__ == '__main__':

@@ -1,0 +1,23 @@
+--- Time and Space complexity analysis ---
+
+function 1: contains(array, val)
+Time complexity O(n): checking for the value will require a loop over all of the array elements in the worst
+case (val is not in the array)
+Space complexity O(1): looking for the value doesn't require any extra space by the system.
+
+
+function 2: rev(array)
+Time complexity O(n): reversing the array will require a loop over all ot its n elements which will result in linear
+time.
+Space complexity O(n): A new array of size n is required to copy all the elements of the current array in a
+reversed order.
+
+
+function 3: insert(array, val, ind)
+Time complexity O(n): setting an element in specific index takes linear time in the worst case if we have n elements
+and we set a new value to index 0, then we will need to shift all the n elements.
+Space complexity O(1): setting an element in specific index doesn't require any extra space so, it takes
+constant space.
+
+
+

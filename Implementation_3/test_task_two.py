@@ -1,11 +1,11 @@
+"""
+Test all the functions in the Dynamic array class
+"""
 from task_two import DynamicArray
 import unittest  # import the unittest module to test the class methods
 
 
 class TestTaskThree(unittest.TestCase):
-    """
-    Test all the functions in the Dynamic array class
-    """
     global arr1  # global arr1 object to be accessed across all of the test functions
     arr1 = DynamicArray()  # create a global instance of the DynamicArray class
     arr1.add(4)  # add the value 4 to the array

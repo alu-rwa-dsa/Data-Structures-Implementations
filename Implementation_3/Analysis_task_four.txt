@@ -1,0 +1,24 @@
+--- Time and Space complexity analysis of the Appositive List ---
+
+Method 1: Add(key, value)
+Time complexity is O(1): adding a key with a value to my associate array takes constant time because it is a uses
+hash table to encode and access every key
+Space Complexity is O(1): because I don't use extra space to add the key associated with its value
+
+
+Method 2: remove(key)
+Time complexity is O(1): removing an existing key with its value happens in constant time because it uses
+hash table to check if the key exists or not and then erase it from the memory.
+Space Complexity is O(1): because I don't use extra space to delete a key.
+
+
+Method 3: modify(key, newValue)
+Time complexity is O(1): updating the value of an existing key happens in constant time because it uses
+hash table to check if the key exists or not and then update the value associated with the key.
+Space Complexity is O(1): because I don't use extra space to update the value of a key.
+ss
+
+Method 4: loopUp(key)
+Time complexity is O(1): Looking up for a key happens in constant time because it uses
+hash table to check if the key exists or not.
+Space Complexity is O(1): because I don't use extra space to check for the existence of a key.

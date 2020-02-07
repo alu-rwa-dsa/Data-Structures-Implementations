@@ -1,0 +1,12 @@
+--- Time and Space complexity analysis of the Dynamic Array class ---
+
+Method 1: add(value)
+Time complexity O(1): adding an element to the end of the dynamic array happens in constant time because
+there are operations needed to copy or shift any elements.
+Space complexity O(1): adding an element doesn't require any
+
+
+Method 2: delete(ind)
+Time complexity O(1): deleting the last element in the list doesn't requires only one operation, so it happens in
+constant time.
+Space complexity O(1): the operation doesn't require any space to be done.

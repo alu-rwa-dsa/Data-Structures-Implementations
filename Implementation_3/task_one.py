@@ -19,7 +19,7 @@ class Array(object):
         """
         if type(val) != int:  # raise type error if value not int type
             raise TypeError ("Invalid type, not int")
-        self.array.insert(ind, val)
+        self.array.set(ind, val)
 
     def get(self, ind):
         """
