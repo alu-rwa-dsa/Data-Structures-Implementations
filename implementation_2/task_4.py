@@ -1,11 +1,10 @@
 # time complexity is o(n) where n is the length of l1
-# Space complexity is o(1) because we are not initializing any new arrays
+# Space complexity is o(nk) where n is the length of l1 and k is the length of l2
 
 
 def extraElement(l1, l2):
     """
-    extraElement takes in two lists, l1 has one extra element compared to l2, it loos through l1 and
-    checks if the element is in l2, and if it is not, it returns the element
+    return the unique element in l1 which is not in l2
     :param l1: input list 1
     :param l2: input list 2
     :return: the value in l1 which is not in l2

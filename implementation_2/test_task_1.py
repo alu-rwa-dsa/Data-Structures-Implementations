@@ -1,5 +1,5 @@
 import unittest
-from task_1 import deleteWhitespaces
+from task_1 import delete_whitespaces
 
 
 class Test(unittest.TestCase):
@@ -9,13 +9,13 @@ class Test(unittest.TestCase):
     """
 
     def testCase1(self):
-        self.assertEqual(deleteWhitespaces("hello       my        friend"), "hello my friend")
+        self.assertEqual(delete_whitespaces("hello       my        friend"), "hello my friend")
 
     def testCase2(self):
-        self.assertEqual(deleteWhitespaces("   e  my   123    friend"), "e my 123 friend")
+        self.assertEqual(delete_whitespaces("   e  my   123    friend"), "e my 123 friend")
 
     def testCase3(self):
-        self.assertEqual(deleteWhitespaces("                "), "")
+        self.assertEqual(delete_whitespaces("                "), "")
 
 
 if __name__ == "__main__":
