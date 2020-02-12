@@ -4,33 +4,33 @@ class Stack(object):
     """
 
     def __init__(self):
-        self.items = []
+        self.stack = []
+
+    def show(self):
+        return self.stack
 
     def push(self, item):
         """
         add a given element to the end of the stack
         """
-        self.items.append(item)
+        self.stack.append(item)
 
     def pop(self):
         """
         delete the last element of the stack
         """
-        try:
-            self.items.pop()
-        except IndexError:
-            raise Exception("Stack is empty")
+        if self.size() > 0:
+            self.stack.pop()
+        else:
+            raise IndexError
 
     def peek(self):
         try:
-            return self.items[-1]
+            return self.stack[-1]
         except IndexError:
             return None
 
     def size(self):
-        return len(self.items)
-
-    def show(self):
-        return self.items
+        return len(self.stack)
 
 
