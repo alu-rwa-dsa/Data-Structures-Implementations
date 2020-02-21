@@ -5,102 +5,106 @@ class Node:
 
 
 class SLinkedList:
+    """
+    SLinkedList class contains the main methods of a single linked list
+    """
     def __init__(self):
         self.head = None
         self.tail = None
         self.size = 0
 
     def get_head(self):
-        if self.head is None:
-            return None
-        return self.head.data
+        """
+        get the value of the first node
+        """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
+        if self.head is None:  # check for a head node in the linked list
+            return None  # return None if there are no nodes in the linked list
+        return self.head.data  # if first node found, return its data
 
     def get_tail(self):
+        """
+        get the value of the last node
+        """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
         if self.tail is None:
             return None
         return self.tail.data
-
-    def get_next(self):
-        if self.head is None:
-            return None
-        return self.head.next.data
 
     def get_size(self):
         return self.size
 
     def prepend(self, val):
-        temp = self.head
-        newNode = Node(val)
-        newNode.next = temp
-        if self.tail is None:
-            self.tail = newNode
-        self.head = newNode
-        self.size += 1
+        """
+        add a leading node at the beginning of the linked list giving its value
+        """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
+        temp = self.head  # store the current head
+        newNode = Node(val)  # create a new node with the giving value
+        newNode.next = temp  # set the reference of the new node to the current head
+        if self.tail is None:  # check if linked list is empty
+            self.tail = newNode  # if empty, set the tail to the new node
+        self.head = newNode  # set the head to the new node
+        self.size += 1  # increase the number of elements of the list
 
     def pop_first(self):
-        if self.head is None:
-            raise IndexError
+        """
+        delete the leading node of the linked list
+        """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
+        if self.head is None:   # check if linked list is empty
+            raise IndexError    # raise an index error
         else:
-            del_val = self.head.data
-            new_head = self.head.next
-            self.head.next = None
-            self.head = new_head
-            self.size -= 1
-            if self.size == 0:
-                self.tail = None
+            del_val = self.head.data  # store the value of the leading node to return it
+            new_head = self.head.next  # get the node after the head
+            self.head.next = None  # delete the reference of the current head by sitting it to None
+            self.head = new_head  # set the new head
+            self.size -= 1  # decrease the number of elements in the linked list by 1
+            if self.size == 0:  # check the size of the linked list after deleting the leading node
+                self.tail = None  # if empty, set tail to None
             return del_val
 
     def append(self, val):
+        """
+        add a node at the end of the linked list giving its value
+        """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
         new_node = Node(val)
-        if self.head is None:
+        if self.head is None:  # check if the linked list is empty, if yes, set the head and tail to the new node
             self.tail = new_node
             self.head = new_node
-        else:
+        else:  # if no, set the current tail to the new added node and set the new node as a tail
             self.tail.next = new_node
             self.tail = new_node
         self.size += 1
 
     def pop_last(self):
-        if self.head is None:
-            return None
-        last_node = self.tail.data
+        """
+        delete the last node of the linked list
+        """
+        # Time complexity: O(n) because we need to reach the last node before the tail
+        # Space complexity: O(1)
+        if self.head is None:  # check if the linked list is empty, if yes, raise an Index error
+            raise IndexError
+        last_node = self.tail.data  # get the data of the last node to return it as output of the operation
         current = self.head
         temp = None
-        while current.next:
+        while current.next:  # loop till the pointer reaches the last node before the tail
             temp = current
             current = current.next
-        self.tail = temp
-        if self.tail:
-            self.tail.next = None
+        self.tail = temp  # set the last value before the tail as a new tail
         self.size -= 1
         if self.size == 0:
             self.head = None
+            self.tail = None
         return last_node
 
 
-# myObj = SLinkedList()
-# myObj.prepend(120)
-# myObj.prepend(130)
-# print(myObj.get_head())
-# print(myObj.get_next())
-# myObj.pop_first()
-# print(myObj.get_head())
-# myObj.append(1000)
-# print(myObj.get_tail())
-# print(myObj.get_head())
-# print(myObj.pop())
-# print(myObj.get_size())
-# print(myObj.pop_last())
-# print(myObj.get_size())
-# print(myObj.get_tail())
-# print(myObj.get_head())
-# print(myObj.pop_last())
-
-# myObj = SLinkedList()
-# myObj.append(120)
-# myObj.append(130)
-# print(myObj.get_head())
-# print(myObj.get_next())
 
 
 

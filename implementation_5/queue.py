@@ -7,7 +7,7 @@ class Queue:
     """
 
     def __init__(self):
-        self.queue = SLinkedList
+        self.queue = SLinkedList()
 
     def show(self):
         out = []
@@ -29,6 +29,9 @@ class Queue:
 
     def dequeue(self):
         """
+        delete the first element of the queue
+        """
+        """
         Time complexity: O(1)
         Space complexity: O(1)
         """
@@ -39,15 +42,14 @@ class Queue:
 
     def peek(self):
         """
+        get the first element of the queue
+        """
+        """
         Time complexity: O(1)
         Space complexity: O(1)
         """
-        return self.queue.head.data
+        try:
+            return self.queue.head.data
+        except AttributeError:
+            return None
 
-
-a = Queue()
-a.enqueue(1200)
-print(a.show())
-a.enqueue(120)
-a.dequeue()
-print(a.peek())

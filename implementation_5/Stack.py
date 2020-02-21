@@ -7,13 +7,15 @@ class Stack(object):
     """
 
     def __init__(self):
+        # initialize a stack object using the single linked list class
         self.stack = SLinkedList()
 
     def show(self):
         """
-        Time complexity: O(1)
-        Space complexity: O(1)
+        show all elements of the stack
         """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
         out = []
         current = self.stack.head
         for _ in range(self.stack.size):
@@ -25,20 +27,16 @@ class Stack(object):
         """
         add a given element to the end of the stack
         """
-        """
-        Time complexity: O(1)
-        Space complexity: O(1)
-        """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
         self.stack.append(val)
 
     def pop(self):
         """
         delete the last element of the stack
         """
-        """
-        Time complexity: O(1)
-        Space complexity: O(1)
-        """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
         if self.stack.size > 0:
             return self.stack.pop_last()
         else:
@@ -46,27 +44,22 @@ class Stack(object):
 
     def peek(self):
         """
-        Time complexity: O(1)
-        Space complexity: O(1)
+        get the last element of the stack
         """
-        return self.stack.tail.data
+        # Time complexity: O(1)
+        # Space complexity: O(1)
+        try:
+            return self.stack.tail.data
+        except AttributeError:
+            return None
 
     def size(self):
         """
-        Time complexity: O(1)
-        Space complexity: O(1)
+        get the number of elements in the stack
         """
+        # Time complexity: O(1)
+        # Space complexity: O(1)
         return self.stack.size
 
 
-a = Stack()
-a.push(5)
-print(a.show())
-a.push(6)
-a.push(6)
-a.push(6)
-print(a.show())
-a.pop()
-print(a.peek())
-print(a.show())
 
