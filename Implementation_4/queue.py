@@ -18,7 +18,7 @@ class Queue:
 
     def dequeue(self):
         """
-        Time complexity: O(1)
+        Time complexity: O(n)
         Space complexity: O(1)
         """
         self.queue.pop(0)
@@ -30,10 +30,3 @@ class Queue:
         """
         return self.queue[0]
 
-
-a = Queue()
-a.enqueue(5)
-print(a)
-a.enqueue(6)
-a.dequeue()
-print(a.peek())

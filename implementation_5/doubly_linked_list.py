@@ -72,54 +72,58 @@ class DLinkedList:
             self.head = None
         return last_node
 
-    def insert(self, node_val, prev_node_val):
-        # check if no head, empty linked list.
-        if not self.head:
-            raise IndexError("Empty Linked List")
-        # create a new Node
-        new_node = Node(node_val)
-        current = self.head
-        # loop through the size of linked list to search for prev_node_val
+    def insert_node(self, new_node, previous_node):
+        next_node = previous_node.next
+        new_node.next = next_node
+        new_node.previous = previous_node
+        if next_node:
+            next_node.previous = new_node
+        else:
+            self.tail = new_node
+        previous_node.next = new_node
+
+        # return a list of all values of the nodes
+        n = self.head
+        out = []
         for _ in range(self.size):
-            # if prev_node_val found
-            if current.data == prev_node_val:
-                # store the value of the next node
-                next_node = current.next
-                # check if value of the next node is not None
-                if next_node:
-                    # link the next node previous pointer to the new node
-                    next_node.previous = new_node
-                # check if value of the current node is not None
-                if current:
-                    current.next = new_node
-                # set the next and previous pointers of the new node
-                new_node.next = next_node
-                new_node.previous = current
+            n = n.next
+            out.append(n.data)
+        return out
 
-                # return a list of all values of the nodes
-                n = self.head
-                out = [n.data]
-                for _ in range(self.size):
-                    n = n.next
-                    out.append(n.data)
-                return out
-            else:
-                current = current.next
-        # the prev_node_val was not found
-        return f"{prev_node_val} is not a node"
+    def detete_node(self, node):
+        prev_node = node.previous
+        next_node = node.next
+        if (not prev_node) and (not next_node):
+            self.head = None
+            self.tail = None
+        if prev_node:
+            prev_node.next = next_node
+        else:
+            self.head = next_node
+        if next_node:
+            next_node.previous = prev_node
+        else:
+            self.tail = prev_node
 
 
+
+# print(newObj.get_head())
+# print(newObj.get_tail())
+# print(newObj.pop())
+# print(newObj.get_head())
+# print(newObj.get_tail())
+# print(newObj.pop())
+# print(newObj.get_head())
+# print(newObj.get_tail())
+# print(newObj.pop())
+# print(newObj.get_head())
+# print(newObj.get_tail())
 newObj = DLinkedList()
 newObj.append(12)
-# print(newObj.get_head())
-# print(newObj.get_tail())
-# print(newObj.pop())
-# print(newObj.get_head())
-# print(newObj.get_tail())
-# print(newObj.pop())
-# print(newObj.get_head())
-# print(newObj.get_tail())
-# print(newObj.pop())
-# print(newObj.get_head())
-# print(newObj.get_tail())
-print(newObj.insert(100, 12))
+print(newObj.insert_node(Node(10000), newObj.head))
+print(newObj.get_head())
+print(newObj.get_tail())
+newObj.detete_node(newObj.head.next)
+print(newObj.get_head())
+print(newObj.get_tail())
+

@@ -96,11 +96,11 @@ class SLinkedList:
 # print(myObj.get_head())
 # print(myObj.pop_last())
 
-myObj = SLinkedList()
-myObj.append(120)
-myObj.append(130)
-print(myObj.get_head())
-print(myObj.get_next())
+# myObj = SLinkedList()
+# myObj.append(120)
+# myObj.append(130)
+# print(myObj.get_head())
+# print(myObj.get_next())
 
 
 
