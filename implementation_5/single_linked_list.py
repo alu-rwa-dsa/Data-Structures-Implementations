@@ -8,6 +8,7 @@ class SLinkedList:
     """
     SLinkedList class contains the main methods of a single linked list
     """
+
     def __init__(self):
         self.head = None
         self.tail = None
@@ -56,8 +57,8 @@ class SLinkedList:
         """
         # Time complexity: O(1)
         # Space complexity: O(1)
-        if self.head is None:   # check if linked list is empty
-            raise IndexError    # raise an index error
+        if self.head is None:  # check if linked list is empty
+            raise IndexError  # raise an index error
         else:
             del_val = self.head.data  # store the value of the leading node to return it
             new_head = self.head.next  # get the node after the head
@@ -104,11 +105,20 @@ class SLinkedList:
             self.tail = None
         return last_node
 
-
-
-
-
-
-
-
-
+    def search(self, val):
+        """
+        check if a value is in the current LinkedList
+        TimeComplexity: O(n) since we will loop through the whole LinkedList in the worst case when the val is not
+        found
+        SpaceComplexity: O(1) since no extra space needed
+        """
+        # check if the current node is None (next.tail)
+        if self.head is None:
+            return False
+        # check if the date in the current node is equals to the given val
+        if self.head.data == val:
+            return True
+        # move the head to the next node
+        self.head = self.head.next
+        # call the search function recursively
+        return self.search(val)
