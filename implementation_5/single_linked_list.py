@@ -122,3 +122,4 @@ class SLinkedList:
         self.head = self.head.next
         # call the search function recursively
         return self.search(val)
+
