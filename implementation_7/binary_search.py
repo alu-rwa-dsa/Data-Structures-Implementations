@@ -1,8 +1,8 @@
-
-
-def search(l, target):
+def binarySearch(l, target):
     """
     Iterative binary search algorithm
+    Time Complexity: O(n*log(n))
+    Space Complexity: O(1)
     """
     start = 0
     end = len(l) - 1

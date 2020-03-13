@@ -18,12 +18,15 @@ def innerSort(left, right):
 def mergeSort(arr):
     """
     mergeSort takes in an array and returns it, sorted.
+    Time Complexity: always O(n*Log(n))
+    Space Complexity: O(n)
     """
     if len(arr) <= 1:
         return arr
 
     midpoint = len(arr) // 2
-    left, right = mergeSort(arr[:midpoint]), mergeSort(arr[midpoint:])
+    left = mergeSort(arr[:midpoint])
+    right = mergeSort(arr[midpoint:])
     return innerSort(left, right)
 
 
