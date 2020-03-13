@@ -1,28 +1,20 @@
 import unittest  # import the unittest module to test the class methods
 
-from binary_search import binarySearch
+from special_sort import specialSort
 
 
 class TestSLinkedList(unittest.TestCase):
     def test1(self):
-        l = [1, 2, 3, 4, 5, 6]
-        target = 4
-        self.assertEqual(binarySearch(l, target), True)
+        alist = [[2, 2], [1, 10], [5, 4], [1, 4]]
+        self.assertEqual(specialSort(alist), [[2, 2], [1, 4], [5, 4], [1, 10]])
 
     def test2(self):
-        l = []
-        target = 4
-        self.assertEqual(binarySearch(l, target), False)
+        alist = []
+        self.assertEqual(specialSort(alist), [])
 
     def test3(self):
-        l = [1, 2, 3, 4, 5, 6]
-        target = 120
-        self.assertEqual(binarySearch(l, target), False)
-
-    def test4(self):
-        l = [1, 2, 3, 4, 5, 6]
-        target = 1
-        self.assertEqual(binarySearch(l, target), True)
+        alist = [[4, 0], [1, 0]]
+        self.assertEqual(specialSort(alist), [[1, 0], [4, 0]])
 
 
 if __name__ == '__main__':
