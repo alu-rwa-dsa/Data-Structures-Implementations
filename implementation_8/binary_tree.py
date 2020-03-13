@@ -18,7 +18,6 @@ class BinaryTree(object):
             traverse += str(root.value) + "-"
             traverse = self.preOrderTraverse(root.left, traverse)
             traverse = self.preOrderTraverse(root.right, traverse)
-            print(traverse)
         return traverse
 
 
