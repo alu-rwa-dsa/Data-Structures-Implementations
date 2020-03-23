@@ -1,3 +1,17 @@
+"""
+Create BinaryTreeNode and BinaryTree Classes including the primary methods.
+Methods:
+    1- Insert
+    2- Delete
+    3- Search for the existence of a specific value
+    4- Traverse:
+        Pre-order traversal
+        In-order traversal
+        Post-order traversal
+Write an algorithm to compute the height of the binary tree.
+"""
+
+
 class Node(object):
     def __init__(self, val):
         self.value = val
