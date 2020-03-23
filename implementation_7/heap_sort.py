@@ -11,6 +11,8 @@ parent_of_node = pos // 2
 for Heap sort: 
     1- form the element in a max or min heap O(n * log(n))
     2- Delete the elements to sort  O(n * log(n))
+Time complexity: O(n*log(n))
+Space Complexity: O(1)
 """
 
 
@@ -22,13 +24,11 @@ def create_max_heap(arr):
     return arr
 
 
-def heap_sort(arr):
+def heapSort(arr):
     # create the heap
     arr = create_max_heap(arr)
-    for i, v in enumerate(arr):
-        arr[0], arr[len(arr) - 1 - i] = arr[len(arr) - 1 - i], arr[0]
-        arr[: arr[len(arr) - 1 - i]] = create_max_heap(arr[: arr[len(arr) - 1 - i]])
+    for i in range(len(arr) - 1, -1, -1):
+        arr[0], arr[i] = arr[i], arr[0]
+        arr = create_max_heap(arr[0: i]) + arr[i: len(arr)]
     return arr
 
-
-print(heap_sort([30, 20, 10, 40, 50, 3]))
