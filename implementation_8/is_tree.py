@@ -5,6 +5,7 @@ element of the list and each other element a subtree.
 
 
 def isTree(l):
+    if len(l) == 0
     if type(l[1]) != list:
         for i in l:
             if type(i) == list:

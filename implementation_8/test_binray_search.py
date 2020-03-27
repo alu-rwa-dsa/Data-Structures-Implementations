@@ -50,6 +50,17 @@ class TestBinaryTree(unittest.TestCase):
         tree.root.right.left = Node(70)
         self.assertEqual(tree.inOrderTraversal(), "13-20-15-10-70-60")
 
+    def test_height(self):
+        tree = BinaryTree()
+        tree.root = Node(10)
+        tree.root.left = Node(20)
+        tree.root.left.left = Node(13)
+        tree.root.left.right = Node(15)
+        tree.root.right = Node(60)
+        tree.root.right.left = Node(70)
+        self.assertEqual(tree.height(tree.root), 3)
+
+
 
 if __name__ == '__main__':
     unittest.main()

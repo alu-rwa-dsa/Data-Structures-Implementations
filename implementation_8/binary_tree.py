@@ -1,10 +1,8 @@
 """
 Create BinaryTreeNode and BinaryTree Classes including the primary methods.
 Methods:
-    1- Insert
-    2- Delete
-    3- Search for the existence of a specific value
-    4- Traverse:
+    1- Search for the existence of a specific value
+    2- Traverse:
         Pre-order traversal
         In-order traversal
         Post-order traversal
@@ -25,6 +23,10 @@ class BinaryTree(object):
         self.number_of_elements = 1
 
     def search(self, val):
+        """
+        Time_Complexity: O(n)
+        Space_complexity: O(1)
+        """
         start = self.root
         return self.preOrderTraverseSearch(start, val)
 
@@ -37,6 +39,10 @@ class BinaryTree(object):
         return False
 
     def preOrderTraverse(self):
+        """
+        Time_Complexity: O(n)
+        Space_complexity: O(1)
+        """
         traverse = ""
         return self.__preOrderTraverse(self.root, traverse)[:-1]
 
@@ -48,6 +54,10 @@ class BinaryTree(object):
         return traverse
 
     def inOrderTraversal(self):
+        """
+        Time_Complexity: O(n)
+        Space_complexity: O(1)
+        """
         traverse = ""
         return self.__inOrderTraversal(self.root, traverse)[:-1]
 
@@ -59,6 +69,10 @@ class BinaryTree(object):
         return traverse
 
     def postOrderTraversal(self):
+        """
+        Time_Complexity: O(n)
+        Space_complexity: O(1)
+        """
         traverse = ""
         return self.__postOrderTraversal(self.root, traverse)[:-1]
 
@@ -68,3 +82,19 @@ class BinaryTree(object):
             traverse = self.__postOrderTraversal(root.right, traverse)
             traverse += str(root.value) + "-"
         return traverse
+
+    def height(self, node):
+        """
+        Time_Complexity: O(n)
+        Space_complexity: O(1)
+        """
+        if node is None:
+            return 0
+        else:
+            # calculate the depth of each subtree
+            leftHeight = self.height(node.left)
+            rightHeight = self.height(node.right)
+
+            # Use the max between leftHeight and rightHeight
+            return max(leftHeight, rightHeight) + 1
+
