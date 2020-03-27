@@ -9,7 +9,6 @@ Methods:
         In-order traversal
         Post-order traversal
 # Write an algorithm to compute the height of the binary tree.
-# Create a binary search tree
 """
 
 
@@ -25,18 +24,6 @@ class BinaryTree(object):
         self.root = None
         self.number_of_elements = 1
 
-    def createBST(self, l):
-        if len(l) < 1:
-            return ""
-        for ele in l:
-            if self.root:
-                if self.root.value < ele:
-                    
-                elif self.root.value > ele:
-
-            else:
-                self.root = Node(ele)
-
     def search(self, val):
         start = self.root
         return self.preOrderTraverseSearch(start, val)
@@ -51,33 +38,33 @@ class BinaryTree(object):
 
     def preOrderTraverse(self):
         traverse = ""
-        return self._preOrderTraverse(self.root, traverse)[:-1]
+        return self.__preOrderTraverse(self.root, traverse)[:-1]
 
-    def _preOrderTraverse(self, root, traverse):
+    def __preOrderTraverse(self, root, traverse):
         if root:
             traverse += str(root.value) + "-"
-            traverse = self._preOrderTraverse(root.left, traverse)
-            traverse = self._preOrderTraverse(root.right, traverse)
+            traverse = self.__preOrderTraverse(root.left, traverse)
+            traverse = self.__preOrderTraverse(root.right, traverse)
         return traverse
 
     def inOrderTraversal(self):
         traverse = ""
-        return self._inOrderTraversal(self.root, traverse)[:-1]
+        return self.__inOrderTraversal(self.root, traverse)[:-1]
 
-    def _inOrderTraversal(self, root, traverse):
+    def __inOrderTraversal(self, root, traverse):
         if root:
-            traverse = self._inOrderTraversal(root.left, traverse)
+            traverse = self.__inOrderTraversal(root.left, traverse)
             traverse += str(root.value) + "-"
-            traverse = self._inOrderTraversal(root.right, traverse)
+            traverse = self.__inOrderTraversal(root.right, traverse)
         return traverse
 
     def postOrderTraversal(self):
         traverse = ""
-        return self._postOrderTraversal(self.root, traverse)[:-1]
+        return self.__postOrderTraversal(self.root, traverse)[:-1]
 
-    def _postOrderTraversal(self, root, traverse):
+    def __postOrderTraversal(self, root, traverse):
         if root:
-            traverse = self._postOrderTraversal(root.left, traverse)
-            traverse = self._postOrderTraversal(root.right, traverse)
+            traverse = self.__postOrderTraversal(root.left, traverse)
+            traverse = self.__postOrderTraversal(root.right, traverse)
             traverse += str(root.value) + "-"
         return traverse
