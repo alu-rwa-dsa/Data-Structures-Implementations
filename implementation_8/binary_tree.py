@@ -88,17 +88,8 @@ class BinaryTree(object):
         Space_complexity: O(1)
         """
         if node is None:
-            return 0
+            return -1
         else:
-            # calculate the depth of each subtree
             leftHeight = self.height(node.left) + 1
             rightHeight = self.height(node.right) + 1
-
-            # Use the max between leftHeight and rightHeight
             return max(leftHeight, rightHeight)
-
-
-t = BinaryTree()
-t.root = Node(1)
-t.root.right = Node(1)
-print(t.height(t.root))
