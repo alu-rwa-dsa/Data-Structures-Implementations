@@ -5,11 +5,11 @@ element of the list and each other element a subtree.
 
 
 def isTree(l):
-    if len(l) == 0
-    if type(l[1]) != list:
-        for i in l:
-            if type(i) == list:
-                print(0)
+    if len(l) == 0:
+        return True
+    else:
+        if type(l[0]) == str or type(l[0]) == int:
+            pass
 
 
 l = [3, [4, [5], [6]], [2, [1], [2]]]

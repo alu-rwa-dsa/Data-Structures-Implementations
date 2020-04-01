@@ -20,7 +20,6 @@ class Node(object):
 class BinaryTree(object):
     def __init__(self):
         self.root = None
-        self.number_of_elements = 1
 
     def search(self, val):
         """
@@ -92,9 +91,14 @@ class BinaryTree(object):
             return 0
         else:
             # calculate the depth of each subtree
-            leftHeight = self.height(node.left)
-            rightHeight = self.height(node.right)
+            leftHeight = self.height(node.left) + 1
+            rightHeight = self.height(node.right) + 1
 
             # Use the max between leftHeight and rightHeight
-            return max(leftHeight, rightHeight) + 1
+            return max(leftHeight, rightHeight)
 
+
+t = BinaryTree()
+t.root = Node(1)
+t.root.right = Node(1)
+print(t.height(t.root))
