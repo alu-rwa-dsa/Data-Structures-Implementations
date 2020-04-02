@@ -59,14 +59,12 @@ class BST(object):
         Time Complexity: O(n)
         Space_Complexity: O(1)
         """
-        traverse = ""
-        return self.__inOrderTraversal(self.root, traverse)[:-1]
+        traverse = []
+        return self.__inOrderTraversal(self.root, traverse)
 
     def __inOrderTraversal(self, root, traverse):
         if root:
             traverse = self.__inOrderTraversal(root.left, traverse)
-            traverse += str(root.value) + "-"
+            traverse.append(root.value)
             traverse = self.__inOrderTraversal(root.right, traverse)
         return traverse
-
-
