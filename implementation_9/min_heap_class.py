@@ -50,18 +50,13 @@ class MinHeap(object):
     def delete(self, ind):
         """
         Delete(ind) - deletes value at a specific index from the heap preserving the identity of the min heap
-            - Delete the last element
-            - Heapify the new element in index, ind.
+        TimeComplexity: O(h) where h is the height of the tree
+        SpaceComplexity: O(1)
         """
         # Swap the element in the given index, ind, with the last element
-        self.min_heap[ind], self.min_heap[-1] = self.min_heap[-1], self.min_heap[0]
+        self.min_heap[ind], self.min_heap[-1] = self.min_heap[-1], self.min_heap[ind]
         # Delete the last element
         deleted_val = self.min_heap.pop()
         # heapify the element in index = ind
         minHeapify(self.min_heap, len(self.min_heap), ind)
         return deleted_val
-
-
-if __name__ == "__main__":
-    m_heap = MinHeap([50, 40, 30, 20, 12, 10, 1])
-    print(m_heap.insert(2))

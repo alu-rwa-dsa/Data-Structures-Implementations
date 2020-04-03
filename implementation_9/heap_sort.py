@@ -30,7 +30,9 @@ def heapSort(arr):
 
     # sort the heap by deleting the first element and heapify the rest
     for i in range(len_arr - 1, -1, -1):
+        # swap the first and last element
         arr[0], arr[i] = arr[i], arr[0]
+        # heapify the root element
         maxHeapify(arr, i, 0)
     return arr
 
