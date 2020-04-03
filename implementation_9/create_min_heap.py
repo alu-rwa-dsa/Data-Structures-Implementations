@@ -30,4 +30,3 @@ def createMinHeap(arr):
     return arr
 
 
-print(createMinHeap([3, 17, 20, 12, 10, 1, 2, 6]))
