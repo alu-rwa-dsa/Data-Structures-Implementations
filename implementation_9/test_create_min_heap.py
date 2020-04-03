@@ -3,7 +3,7 @@ import unittest  # import the unittest module to test the class methods
 from implementation_9.create_min_heap import createMinHeap
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestMinHeap(unittest.TestCase):
     def test1(self):
         arr = [1]
         self.assertEqual(createMinHeap(arr), [1])

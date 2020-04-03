@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from special_sort import specialSort
+from implementation_7.special_sort import specialSort
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestSpecialSort(unittest.TestCase):
     def test1(self):
         alist = [[2, 2], [1, 10], [5, 4], [1, 4]]
         self.assertEqual(specialSort(alist), [[2, 2], [1, 4], [5, 4], [1, 10]])

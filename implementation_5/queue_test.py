@@ -1,10 +1,9 @@
 """
 Test all function in the stack class
 """
-
-from queue import Queue
-
 import unittest  # import the unittest module to test the class methods
+
+from implementation_5.queue import Queue
 
 
 class TestQueue(unittest.TestCase):

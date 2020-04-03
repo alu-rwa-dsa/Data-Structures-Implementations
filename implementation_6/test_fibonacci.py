@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from Fibonacci import fibonacci
+from implementation_6.Fibonacci import fibonacci
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestFib(unittest.TestCase):
     def test1(self):
         self.assertEqual(fibonacci(0), 0)
 

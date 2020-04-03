@@ -1,6 +1,6 @@
 import unittest  # import the unittest module to test the class methods
 
-from binary_search_tree import BST
+from implementation_8.binary_search_tree import BST
 
 
 class TestBSTTree(unittest.TestCase):

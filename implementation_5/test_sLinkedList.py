@@ -1,6 +1,6 @@
 import unittest  # import the unittest module to test the class methods
 
-from single_linked_list import SLinkedList
+from implementation_5.single_linked_list import SLinkedList
 
 
 class TestSLinkedList(unittest.TestCase):

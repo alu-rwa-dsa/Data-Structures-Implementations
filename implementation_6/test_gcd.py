@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from find_gcd import gcd
+from implementation_6.find_gcd import gcd
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestGCD(unittest.TestCase):
     def test1(self):
         self.assertEqual(gcd(20, 30), 10)
 

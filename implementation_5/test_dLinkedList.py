@@ -1,7 +1,7 @@
 import unittest  # import the unittest module to test the class methods
 
-from doubly_linked_list import DLinkedList
-from doubly_linked_list import Node
+from implementation_5.doubly_linked_list import DLinkedList
+from implementation_5.doubly_linked_list import Node
 
 
 class TestSLinkedList(unittest.TestCase):

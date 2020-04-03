@@ -3,7 +3,7 @@ import unittest  # import the unittest module to test the class methods
 from implementation_9.is_heap import isMinHeap
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestIsHeap(unittest.TestCase):
     def test1(self):
         arr = [1, 5, 6, 10, 12, 13, 14, 12, 15, 20]
         self.assertEqual(isMinHeap(arr), True)

@@ -1,10 +1,9 @@
 """
 Test all function in the stack class
 """
-
-from Stack import Stack
-
 import unittest  # import the unittest module to test the class methods
+
+from implementation_5.Stack import Stack
 
 
 class TestStacks(unittest.TestCase):
