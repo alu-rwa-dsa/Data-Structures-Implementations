@@ -1,4 +1,4 @@
-def min_heapify(arr, len_arr, i):
+def minHeapify(arr, len_arr, i):
     f_child = 2 * i + 1
     s_child = 2 * i + 2
     # get the smallest value between the first and second child
@@ -13,7 +13,7 @@ def min_heapify(arr, len_arr, i):
             # swap the parent with its smallest child
             arr[i], arr[smallest] = arr[smallest], arr[i]
             # heapify the new sub-tree
-            min_heapify(arr, len_arr, smallest)
+            minHeapify(arr, len_arr, smallest)
 
 
 def createMinHeap(arr):
@@ -24,8 +24,8 @@ def createMinHeap(arr):
     """
     len_arr = len(arr)
     for i in range((len_arr // 2) - 1, -1, -1):
-        # min_heapify takes in the arr, len_arr = len of the array, i = every possible parent
-        min_heapify(arr, len_arr, i)
+        # minHeapify takes in the arr, len_arr = len of the array, i = every possible parent
+        minHeapify(arr, len_arr, i)
 
     return arr
 

@@ -68,3 +68,8 @@ class BST(object):
             traverse.append(root.value)
             traverse = self.__inOrderTraversal(root.right, traverse)
         return traverse
+
+
+t = BST()
+t.createBST([5, 1, 4, 3, 6])
+print(t.inOrderTraversal())
