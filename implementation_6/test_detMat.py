@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from det_mat import detMat
+from implementation_6.det_mat import detMat
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestDetOfMat(unittest.TestCase):
     def test1(self):
         self.assertEqual(detMat([[7, 2, 2, 1], [120, 1, 2, 3], [1, 1, 4, 8], [3, 4, 5, 6]]), -1056.0)
 

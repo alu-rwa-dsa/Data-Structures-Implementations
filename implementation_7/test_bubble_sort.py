@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from bubble_sort import bubbleSort
+from implementation_7.bubble_sort import bubbleSort
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestBubbleSort(unittest.TestCase):
     def test1(self):
         l = [5, 3, 12, 2, 1]
         self.assertEqual(bubbleSort(l), [1, 2, 3, 5, 12])

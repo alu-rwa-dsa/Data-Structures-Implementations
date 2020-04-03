@@ -42,7 +42,7 @@ class MinHeap(object):
         val_ind = len(self.min_heap) - 1
         # compare the inserted value to its parent, and swap it with its parent while its value is less than
         # its parent
-        while self.min_heap[val_ind] < self.min_heap[(val_ind-1)//2]:
+        while (val_ind-1)//2 >= 0 and self.min_heap[val_ind] < self.min_heap[(val_ind-1)//2]:
             self.min_heap[val_ind], self.min_heap[(val_ind-1)//2] = self.min_heap[(val_ind-1)//2], self.min_heap[val_ind]
             val_ind = (val_ind-1)//2
         return self.min_heap

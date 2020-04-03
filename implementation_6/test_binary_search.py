@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from binary_search import binarySearch
+from implementation_6.binary_search import binarySearch
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestBinarySearch(unittest.TestCase):
     def test1(self):
         l = [1, 2, 3, 4, 5, 6]
         target = 4

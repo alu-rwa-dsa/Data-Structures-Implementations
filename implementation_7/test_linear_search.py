@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from linear_search import linearSearch
+from implementation_7.linear_search import linearSearch
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestSLinearSearch(unittest.TestCase):
     def test1(self):
         l = [1, 2, 3, 4, 5, 6]
         target = 4

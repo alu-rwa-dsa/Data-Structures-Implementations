@@ -7,7 +7,7 @@ import unittest  # import the unittest module to test the class methods
 from implementation_5.single_linked_list import SLinkedList
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestSLinkedListSearch(unittest.TestCase):
     def test1(self):
         newObj = SLinkedList()
         newObj.prepend(10)

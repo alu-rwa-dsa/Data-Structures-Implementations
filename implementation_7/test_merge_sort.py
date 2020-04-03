@@ -1,9 +1,9 @@
 import unittest  # import the unittest module to test the class methods
 
-from merge_sort import mergeSort
+from implementation_7.merge_sort import mergeSort
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestMergeSort(unittest.TestCase):
     def test1(self):
         l = [5, 3, 12, 2, 1]
         self.assertEqual(mergeSort(l), [1, 2, 3, 5, 12])

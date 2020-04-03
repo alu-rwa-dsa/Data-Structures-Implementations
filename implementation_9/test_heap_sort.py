@@ -3,7 +3,7 @@ import unittest  # import the unittest module to test the class methods
 from implementation_9.heap_sort import heapSort
 
 
-class TestSLinkedList(unittest.TestCase):
+class TestHeapSort(unittest.TestCase):
     def test1(self):
         l = [5, 3, 12, 2, 1]
         self.assertEqual(heapSort(l), [1, 2, 3, 5, 12])
