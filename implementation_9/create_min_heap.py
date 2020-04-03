@@ -28,5 +28,3 @@ def createMinHeap(arr):
         minHeapify(arr, len_arr, i)
 
     return arr
-
-
