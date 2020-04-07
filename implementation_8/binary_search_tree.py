@@ -71,5 +71,5 @@ class BST(object):
 
 
 t = BST()
-t.createBST([5, 1, 4, 3, 6])
+t.createBST([5, 1, 4, 0, 6])
 print(t.inOrderTraversal())

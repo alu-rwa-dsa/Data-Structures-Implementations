@@ -18,15 +18,21 @@ class Queue:
 
     def dequeue(self):
         """
-        Time complexity: O(n)
+        Time complexity: O(1)
         Space complexity: O(1)
         """
-        self.queue.pop(0)
+        if len(self.queue) == 0:
+            raise IndexError("dequeue from an empty queue")
+        else:
+            self.queue = self.queue[1:]
 
     def peek(self):
         """
         Time complexity: O(1)
         Space complexity: O(1)
         """
+        if len(self.queue) == 0:
+            raise IndexError("queue is empty")
         return self.queue[0]
+
 
