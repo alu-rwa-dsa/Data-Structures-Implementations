@@ -94,29 +94,9 @@ class BinaryTree(object):
             rightHeight = self.height(node.right) + 1
             return max(leftHeight, rightHeight)
 
-    def hasPathSum(self, root, sum):
-        """
-        check if the sum of all nodes in a branch from root to leaf == sum
-        """
-        l_sum = 0
-        r_sum = 0
-        if root:
-            l_sum += root.value + self.hasPathSum(root.left, sum)
-            r_sum += root.value + self.hasPathSum(root.right, sum)
-        else:
-            return l_sum == sum or r_sum == sum
+    diameter = 0
 
-t = BinaryTree()
-t.root = Node(5)
-t.root.left = Node(4)
-t.root.right = Node(8)
-t.root.left.left = Node(11)
-t.root.left.left.left = Node(7)
-t.root.left.left.right = Node(2)
-t.root.left.left.right = Node(2)
-t.root.right.left = Node(13)
-t.root.right.right = Node(4)
-print(t.hasPathSum(t.root, 22))
+
 #
 #       5
 #      / \

@@ -54,6 +54,24 @@ class BST(object):
                 start = start.right
         return False
 
+    def searchRecursive(self, val):
+        """
+        Time Complexity: O(log(n))
+        Space_Complexity: O(1)
+        """
+        def __helper(val, root):
+            if root:
+                if root.value == val:
+                    return True
+                elif root.value > val:
+                    return __helper(val, root.left)
+                else:
+                    return __helper(val, root.right)
+            else:
+                return False
+        return __helper(val, self.root)
+
+
     def inOrderTraversal(self):
         """
         Time Complexity: O(n)
@@ -68,8 +86,3 @@ class BST(object):
             traverse.append(root.value)
             traverse = self.__inOrderTraversal(root.right, traverse)
         return traverse
-
-
-t = BST()
-t.createBST([5, 1, 4, 0, 6])
-print(t.inOrderTraversal())
