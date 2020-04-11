@@ -7,6 +7,7 @@ class Node(object):
 
 class BST(object):
     def __init__(self):
+        self.len = 0
         self.root = None
 
     def createBST(self, l):
@@ -14,6 +15,8 @@ class BST(object):
         Time Complexity: O(n*log(n))
         Space_Complexity: O(1)
         """
+        # update the length of the BST
+        self.len = len(l)
         # check if the list is empty
         if len(l) < 1:
             return ""
@@ -59,6 +62,7 @@ class BST(object):
         Time Complexity: O(log(n))
         Space_Complexity: O(1)
         """
+
         def __helper(val, root):
             if root:
                 if root.value == val:
@@ -69,20 +73,32 @@ class BST(object):
                     return __helper(val, root.right)
             else:
                 return False
+
         return __helper(val, self.root)
 
-
+    # inOrderTraversal returns the values of nodes in the tree as sorted list (ASC order)
     def inOrderTraversal(self):
         """
         Time Complexity: O(n)
         Space_Complexity: O(1)
         """
         traverse = []
-        return self.__inOrderTraversal(self.root, traverse)
-
-    def __inOrderTraversal(self, root, traverse):
-        if root:
-            traverse = self.__inOrderTraversal(root.left, traverse)
-            traverse.append(root.value)
-            traverse = self.__inOrderTraversal(root.right, traverse)
+        f = self.__inOrderTraversal(self.root)
+        for _ in range(self.len):
+            traverse.append(next(f))
         return traverse
+
+    def __inOrderTraversal(self, root):
+        if root:
+            yield from self.__inOrderTraversal(root.left)
+            yield root.value
+            yield from self.__inOrderTraversal(root.right)
+
+    # find the kth smallest element in the BST
+    def kthSmallestInBST(self, root, K):
+        f = self.__inOrderTraverse(root)
+        for _ in range(K):
+            ans = next(f)
+        return ans
+
+
