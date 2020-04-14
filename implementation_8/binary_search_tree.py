@@ -94,11 +94,32 @@ class BST(object):
             yield root.value
             yield from self.__inOrderTraversal(root.right)
 
+
     # find the kth smallest element in the BST
     def kthSmallestInBST(self, root, K):
-        f = self.__inOrderTraverse(root)
+        f = self.__inOrderTraversal(root)
         for _ in range(K):
             ans = next(f)
         return ans
 
+    # check if a binary search tree is valid or not
+    def isValid(self, root):
+        f = self.__inOrderTraversal(root)
+        if root:
+            pre = next(f)
+            while True:
+                try:
+                    new = next(f)
+                    if new <= pre:
+                        return False
+                    pre = new
+                except:
+                    return True
+        else:
+            return True
 
+
+
+t = BST()
+t.createBST([0])
+print(t.isValid(t.root))
