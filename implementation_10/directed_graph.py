@@ -19,7 +19,7 @@ class DirectedGraph:
         return name in self.e
 
     def isEdge(self, start, end):
-        if self.isVertex(start):
+        if self.isVertex(start) and self.isVertex(end):
             return end in self.e[start]
         return False
 
@@ -29,7 +29,7 @@ class DirectedGraph:
 
     def __validate_edge(self, start, end):
         if not self.isEdge(start, end):
-            raise ValueError(f" No edge found between {start} and {end}")
+            raise KeyError(f" No edge found between {start} and {end}")
 
     def show_edge(self, start=None, end=None):
         """
@@ -68,32 +68,28 @@ class DirectedGraph:
         self.__validate_vertex(start)
         self.__validate_vertex(end)
         weight_type = type(weight)
+        # accept int values only for the weigh
         if weight_type is not int:
             raise ValueError(f"Weight should be of type int not {weight_type}")
+        # check if the edge exists
+        if self.isEdge(start, end):
+            # if the weight is different, update the weight, otherwise raise a ValueError
+            if weight == self.e[start][end]:
+                raise ValueError('Edge exists')
+            self.update_weight(start, end, weight)
         self.e[start][end] = weight
         return self.show_edge(start, end)
 
     def delete_edge(self, start, end):
-        self.__validate_vertex(start)
-        self.__validate_vertex(end)
         self.__validate_edge(start, end)
         del self.e[start][end]
-        return self.show_edge(start, end)
 
     def update_weight(self, start, end, new_weight):
-        self.__validate_vertex(start)
-        self.__validate_vertex(end)
         self.__validate_edge(start, end)
+        weight_type = type(new_weight)
+        if weight_type is not int:
+            raise ValueError(f"Weight should be of type int not {weight_type}")
         self.e[start][end] = new_weight
         return self.show_edge(start, end)
 
 
-graph = DirectedGraph()
-graph.insert_vertex("A")
-graph.insert_vertex("B")
-graph.insert_vertex("D")
-graph.insert_edge("A", "B", "100")
-graph.insert_edge("A", "D", 200)
-print(graph.isEdge("A", "B"))
-print(graph.isVertex("k"))
-print(graph.update_weight("A", "B", 1203))

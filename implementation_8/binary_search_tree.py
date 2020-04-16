@@ -118,8 +118,22 @@ class BST(object):
         else:
             return True
 
+    def rangeSumBST(self, root, L, R):
+        ans = 0
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            if node:
+                if L <= node.value <= R:
+                    ans += node.value
+                if L < node.value:
+                    stack.append(node.left)
+                if node.value < R:
+                    stack.append(node.right)
+        return ans
+
 
 
 t = BST()
-t.createBST([0])
-print(t.isValid(t.root))
+t.createBST([15, 9, 21, 7, 13, 19, 23, 5, 11, 17])
+print(t.rangeSumBST(t.root, 21, 23))
