@@ -6,11 +6,11 @@ Create an Undirected Weighted Graph class using Adjacency Matrices along with re
 
 class UndirectedGraph:
     def __init__(self):
-        # self.v is a dictionary contains all of the vertex of the graph as keys and their index in
-        # the edges list as value. Ex: {"A": 0}
+        # self.v is a dictionary contains all of the vertex of the graph as keys and their indices as values
+        # Ex: {"A": 0}
         self.v = {}
         # self.e is a V*V matrix that represents the all edges of the graph. An edge between two vertices is represented
-        # by the weight of the edge
+        # by the weight of the edge and 0 if there is no edge.
         self.e = []
 
     def __str__(self):
@@ -40,6 +40,7 @@ class UndirectedGraph:
             # verify that the index that represents the intersection between the vertices is not 0
             v1_ind = self.v[vertex_1]
             v2_ind = self.v[vertex_2]
+            # check if weight value is not 0, return True
             if self.e[v1_ind][v2_ind]:
                 return True
         return False
@@ -94,17 +95,73 @@ class UndirectedGraph:
                 self.v[key] -= 1
         return vertex
 
+    def __verify_vertices(self, v1, v2):
+        """
+        __verify_vertices is a helper method takes in two vertices and verify v1 and v2 are existing vertices
+        by raising an error if not.
+        """
+
+        if not self.isVertex(v1) or not self.isVertex(v2):
+            raise KeyError('Vertex exist in the graph')
+
+    def __update_edge_weight(self, v1, v2, w):
+        """
+        __update_edge is a helper method that is used to update the weight value of an existing edge
+        """
+        # verify that the weight is a numeric value
+        if type(w) is not int:
+            raise ValueError('weight should be int')
+        v1_ind = self.v[v1]
+        v2_ind = self.v[v2]
+        self.e[v1_ind][v2_ind] = w
+        self.e[v2_ind][v1_ind] = w
+        return f"{v1} --- {v2} -- w = {w}"
+
     def insert_edge(self, v1, v2, w):
         """
         insert_edge takes in the name of two existing vertices (v1, v2) and connects them with the given weight, w.
+            - Note: if v1 or v2 is not an existing vertex or there is an edge between v1 and v2 or weight is not int
+                    value, an Error will be raised
+        TimeComplexity: O(1)
+        SpaceComplexity: O(1)
         """
-        if not self.isVertex(v1) or not self.isVertex(v2):
-            raise KeyError('Vertex exist in the graph')
+        self.__verify_vertices(v1, v2)
+        # verify that there is no existing edge between v1 and v2
         if self.isEdge(v1, v2):
-            raise KeyError('Edge exist between the two given ')
+            raise KeyError('Edge exist between the two given vertices, you can only update the weight of their edge.')
+        return self.__update_edge_weight(v1, v2, w)
+
+    def delete_edge(self, v1, v2):
+        """
+        delete_edge takes in the name of two existing vertices (v1, v2) deletes the edge between them.
+            - Note: if v1 or v2 is not an existing vertex or there is no edge between v1 and v2 an Error will be raised
+        TimeComplexity: O(1)
+        SpaceComplexity: O(1)
+        """
+        self.__verify_vertices(v1, v2)
+        # verify that there is an edge between v1 and v2
+        if not self.isEdge(v1, v2):
+            raise KeyError("Edge doesn't exist between the two given vertices")
+        return self.__update_edge_weight(v1, v2, 0)
+
+    def update_weight(self, v1, v2, new_weight):
+        """
+        delete_edge takes in the name of two existing vertices (v1, v2) and new weight to update the weight of the
+        edge between them.
+            - Note: if v1 or v2 is not an existing vertex or there is no edge between v1 and v2 or the new weight is
+             not an numeric value, an Error will be raised.
+        TimeComplexity: O(1)
+        SpaceComplexity: O(1)
+        """
+        self.__verify_vertices(v1, v2)
+        """
+        TODO: do I need to check if the value of the current weight is 0, no edge, and raise an error?
+        """
+        return self.__update_edge_weight(v1, v2, new_weight)
 
 
 graph = UndirectedGraph()
 graph.insert_vertex("A")
 graph.insert_vertex("B")
 graph.insert_vertex("C")
+graph.update_weight("A", "C")
