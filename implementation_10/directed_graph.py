@@ -16,9 +16,17 @@ class DirectedGraph:
         return str(list(self.e.keys()))
 
     def isVertex(self, name):
+        """
+        TimeComplexity: O(1) since I am using a dictionary (hash map) which optimized the process of finding a vertex
+        SpaceComplexity: O(1)
+        """
         return name in self.e
 
     def isEdge(self, start, end):
+        """
+        TimeComplexity: O(1)
+        SpaceComplexity: O(1)
+        """
         if self.isVertex(start) and self.isVertex(end):
             return end in self.e[start]
         return False
@@ -37,6 +45,9 @@ class DirectedGraph:
             - if start and end were given, it returns the edge between them
             - if start only, return all edges of it.
             - if None, return all vertices with their edges
+
+        TimeComplexity: If start and/ or end is given O(1), otherwise O(|v|) where |v| is the number of vertices
+        SpaceComplexity: O(1)
         """
         if start:
             self.__validate_vertex(start)
@@ -52,10 +63,18 @@ class DirectedGraph:
             print(f"{v} -->> {self.e[v]}")
 
     def insert_vertex(self, name):
+        """
+        TimeComplexity: O(1)
+        SpaceComplexity: O(1)
+        """
         if not self.isVertex(name):
             self.e[name] = {}
 
     def delete_vertex(self, vertex):
+        """
+        TimeComplexity: O(1)
+        SpaceComplexity: O(1)
+        """
         self.__validate_vertex(vertex)
         del self.e[vertex]
         return vertex
@@ -64,6 +83,8 @@ class DirectedGraph:
         """
         insert_edge takes in the start and end vertex with the weight of the edge
         Note: both vertices needs to be created first before adding an edge between them
+        TimeComplexity: O(1)
+        SpaceComplexity: O(1)
         """
         self.__validate_vertex(start)
         self.__validate_vertex(end)
@@ -81,10 +102,18 @@ class DirectedGraph:
         return self.show_edge(start, end)
 
     def delete_edge(self, start, end):
+        """
+        TimeComplexity: O(1) since finding the element is O(1)
+        SpaceComplexity: O(1)
+        """
         self.__validate_edge(start, end)
         del self.e[start][end]
 
     def update_weight(self, start, end, new_weight):
+        """
+        TimeComplexity: O(1) since finding the element is O(1)
+        SpaceComplexity: O(1)
+        """
         self.__validate_edge(start, end)
         weight_type = type(new_weight)
         if weight_type is not int:
