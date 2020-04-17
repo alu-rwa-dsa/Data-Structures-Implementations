@@ -14,12 +14,9 @@ class UndirectedGraph:
         self.e = []
 
     def __str__(self):
-        repre = ""
-        for row in self.e:
-            repre += str(row) + "\n"
-        return repre
+        return str(self.e)
 
-    def show_all_vertices(self):
+    def all_vertices(self):
         return list(self.v.keys())
 
     def isVertex(self, name):
@@ -102,7 +99,7 @@ class UndirectedGraph:
         """
 
         if not self.isVertex(v1) or not self.isVertex(v2):
-            raise KeyError('Vertex exist in the graph')
+            raise KeyError("Vertex doesn't exist in the graph")
 
     def __update_edge_weight(self, v1, v2, w):
         """
@@ -115,7 +112,7 @@ class UndirectedGraph:
         v2_ind = self.v[v2]
         self.e[v1_ind][v2_ind] = w
         self.e[v2_ind][v1_ind] = w
-        return f"{v1} --- {v2} -- w = {w}"
+        return f"{v1} --- {v2} --- {w}"
 
     def insert_edge(self, v1, v2, w):
         """
@@ -128,7 +125,7 @@ class UndirectedGraph:
         self.__verify_vertices(v1, v2)
         # verify that there is no existing edge between v1 and v2
         if self.isEdge(v1, v2):
-            raise KeyError('Edge exist between the two given vertices, you can only update the weight of their edge.')
+            raise KeyError('An edge exist between the two given vertices, you can only update the weight')
         return self.__update_edge_weight(v1, v2, w)
 
     def delete_edge(self, v1, v2):
@@ -158,10 +155,3 @@ class UndirectedGraph:
         TODO: do I need to check if the value of the current weight is 0, no edge, and raise an error?
         """
         return self.__update_edge_weight(v1, v2, new_weight)
-
-
-graph = UndirectedGraph()
-graph.insert_vertex("A")
-graph.insert_vertex("B")
-graph.insert_vertex("C")
-graph.update_weight("A", "C")
