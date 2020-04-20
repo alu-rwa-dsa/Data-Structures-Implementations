@@ -13,9 +13,6 @@ class UndirectedGraph:
         # by the weight of the edge and 0 if there is no edge.
         self.e = []
 
-    def __str__(self):
-        return str(self.e)
-
     def all_vertices(self):
         return list(self.v.keys())
 
@@ -155,3 +152,6 @@ class UndirectedGraph:
         TODO: do I need to check if the value of the current weight is 0, no edge, and raise an error?
         """
         return self.__update_edge_weight(v1, v2, new_weight)
+
+
+g = UndirectedGraph()
