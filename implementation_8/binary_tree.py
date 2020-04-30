@@ -63,6 +63,7 @@ class BinaryTree(object):
     def __inOrderTraversal(self, root, traverse):
         if root:
             traverse = self.__inOrderTraversal(root.left, traverse)
+            # note that the inner stack keeps all info about specific stage such as root and traverse of every stage
             traverse += str(root.value) + "-"
             traverse = self.__inOrderTraversal(root.right, traverse)
         return traverse
@@ -96,6 +97,15 @@ class BinaryTree(object):
 
     diameter = 0
 
+b = BinaryTree()
+b.root = Node(5)
+b.root.left = Node(4)
+b.root.left.left = Node(11)
+b.root.right = Node(8)
+b.root.right.left = Node(13)
+b.root.right.right = Node(4)
+
+print(b.inOrderTraversal())
 
 #
 #       5
@@ -103,6 +113,4 @@ class BinaryTree(object):
 #     4   8
 #    /   / \
 #   11  13  4
-#  /  \      \
-# 7    2      1
-#
+

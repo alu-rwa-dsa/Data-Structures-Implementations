@@ -4,12 +4,18 @@ element of the list and each other element a subtree.
 """
 
 
-def isTree(l):
-    if len(l) == 0:
-        return True
+def isTree(l, value=True):
+    if len(l) <= 1:
+        return type(l[0]) != list
+    if type(l[0]) != list:
+        for ele in l[1:]:
+            if type(ele) != list:
+                return False
+            value = isTree(ele)
     else:
-        if type(l[0]) == str or type(l[0]) == int:
-            pass
+        return False
+
+    return value
 
 
 l = [3, [4, [5], [6]], [2, [1], [2]]]

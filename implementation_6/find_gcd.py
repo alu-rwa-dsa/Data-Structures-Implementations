@@ -10,3 +10,12 @@ def gcd(a, b):
         return max(a, b)
     # call the gcd give a = b and b = a % b
     return gcd(b, a % b)
+
+
+# def gcd_2(a, b):
+#     if a == b:
+#         return a
+#     elif a > b:
+#         return gcd_2(a - b, b)
+#     else:
+#         return gcd_2(a, b - a)

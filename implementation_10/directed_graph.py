@@ -1,6 +1,10 @@
 """
-Create a Directed Weighted Graph class using Adjacency Lists along with the relevant primary methods.
+1- Create a Directed Weighted Graph class using Adjacency Lists along with the relevant primary methods.
 (Insert/Delete edge, Insert/Delete vertex, Update weight)
+
+2- Write a function FindPath(v1,v2) that inputs two vertices in your directed weighted graph and finds a
+path from v1 to v2 outputting an array of edges starting from v1 and ending at v2 such that there is a
+directed edge from v1 to the next and so on until v2. Return False if no path exists.
 """
 
 
@@ -152,17 +156,6 @@ class DirectedGraph:
         # in case the vertex doesn't have any edges, pop the element from the stack
         stack.pop()
         return self.__helper(stack, seen, end)
-
-
-g = DirectedGraph()
-g.insert_vertex("A")
-g.insert_vertex("B")
-g.insert_vertex("D")
-g.insert_vertex("C")
-g.insert_edge("A", "B", 120)
-g.insert_edge("A", "D", 100)
-g.insert_edge("D", "C", 100)
-print(g.FindPath("A", "C"))
 
 
 

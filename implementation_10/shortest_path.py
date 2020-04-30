@@ -95,7 +95,7 @@ class UndirectedGraph:
 
 def FindShortestLength2(graph):
     """
-    FindShortestLength2(UWG) function takes an Undirected Weighted Graph as input and finds the shortest
+    FindShortestLength2(UWG) takes an Undirected Weighted Graph as input and finds the shortest
      (in terms of sums of the weight) path of length 2 outputting the 3 vertices that form the path of length 2.
       Edges may not be repeated in the path.
     """
