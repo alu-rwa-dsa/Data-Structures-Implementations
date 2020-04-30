@@ -2,7 +2,7 @@
 Test all function in the stack class
 """
 
-from queue import Queue
+from Implementation_4.queue import Queue
 
 
 import unittest  # import the unittest module to test the class methods
