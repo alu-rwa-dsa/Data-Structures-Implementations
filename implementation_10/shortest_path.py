@@ -93,7 +93,7 @@ class UndirectedGraph:
         self.e[end][start] = new_weight
 
 
-def FindShortestLength2(graph):
+def findShortestLength2(graph):
     """
     FindShortestLength2(UWG) takes an Undirected Weighted Graph as input and finds the shortest
      (in terms of sums of the weight) path of length 2 outputting the 3 vertices that form the path of length 2.
@@ -116,16 +116,3 @@ def FindShortestLength2(graph):
                     min_so_far = c_sum
                     out = [key, k, k1]
     return out
-
-g = UndirectedGraph()
-g.insert_vertex("A")
-g.insert_vertex("B")
-g.insert_vertex("C")
-g.insert_vertex("D")
-g.insert_edge("A", "B", 30)
-g.insert_edge("A", "C", 10)
-g.insert_edge("A", "D", 10)
-g.insert_edge("B", "C", 20)
-g.insert_edge("D", "C", 20)
-g.insert_edge("B", "D", 10)
-print(FindShortestLength2(g))
