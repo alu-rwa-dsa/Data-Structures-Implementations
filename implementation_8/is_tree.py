@@ -5,7 +5,9 @@ element of the list and each other element a subtree.
 
 
 def isTree(l, value=True):
-    if len(l) <= 1:
+    if len(l) == 0:
+        return True
+    if len(l) == 1:
         return type(l[0]) != list
     if type(l[0]) != list:
         for ele in l[1:]:
@@ -18,5 +20,3 @@ def isTree(l, value=True):
     return value
 
 
-l = [3, [4, [5], [6]], [2, [1], [2]]]
-print(isTree(l))
