@@ -1,5 +1,5 @@
 import unittest
-from task_2 import charOccurrences
+from implementation_2.task_2 import charOccurrences
 
 
 class Test(unittest.TestCase):

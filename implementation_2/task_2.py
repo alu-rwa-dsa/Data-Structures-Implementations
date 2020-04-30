@@ -2,22 +2,18 @@
 # Space complexity is o(n) where n is the length of the string, because n the worst case
 # all the chars are unique and every time we will add the new char to the dictionary
 
+from collections import defaultdict
+
 
 def charOccurrences(string):
     """
-    charOccurrences defies an empty dictionary and adds every unique char in the input string
-    as a key associated with its number of occurrence as a value
+    charOccurrences returns a dictionary with the count of every char in the input string
     :param string: user input string contains letters
     :return: a dictionary with the input string unique chars as keys and their number of occurrence as values
     """
     # create an empty dictionary
-    d = {}
+    d = defaultdict(int)
     # loop through the string
     for char in string:
-        # if the char is a key in the dictionary add 1 to its values
-        if d.get(char):
-            d[char] += 1
-        # if it is not a key, then add it as a key with a value of 1
-        else:
-            d[char] = 1
+        d[char] += 1
     return d

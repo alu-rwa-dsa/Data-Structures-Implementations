@@ -1,5 +1,5 @@
 import unittest
-from task_1 import delete_whitespaces
+from implementation_2.task_1 import delete_whitespaces
 
 
 class Test(unittest.TestCase):

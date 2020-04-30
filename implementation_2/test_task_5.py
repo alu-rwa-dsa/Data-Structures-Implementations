@@ -1,5 +1,6 @@
 import unittest
-from task_5 import listCounter, listCounter2
+from implementation_2.task_5 import listCounter, listCounter2
+
 
 class Test(unittest.TestCase):
     """

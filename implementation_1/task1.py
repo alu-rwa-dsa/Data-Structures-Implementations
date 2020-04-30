@@ -2,6 +2,7 @@
 import time
 import memory_profiler
 
+
 def binary_search(arr, k):
     """
     Cut the array into halves and look for k
@@ -36,7 +37,6 @@ end = time.perf_counter()
 # getting the execution time
 tot_time = (end - start) / 1000
 print("Time it took to run the alg = {} ms".format(tot_time))
-
 
 # using memory_usage method from memory_profile to accumulate all the space used to run binary_search
 mem_usage = memory_profiler.memory_usage(binary_search([1, 2, 3, 4, 5], 0))

@@ -1,5 +1,6 @@
 import unittest
-from task_3 import mergeLists
+from implementation_2.task_3 import mergeLists
+
 
 class Test(unittest.TestCase):
     def testCase1(self):
@@ -13,6 +14,7 @@ class Test(unittest.TestCase):
 
     def testCase4(self):
         self.assertEqual(mergeLists([[3]]), [3])
+
 
 if __name__ == "__main__":
     Test()
