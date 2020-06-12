@@ -1,2 +1,3 @@
 # Data Structures Implementations
-implementations of Data Structure using Python and JavaScript
+implementations of Data Structure and famous algorithms using Python 3.
+
